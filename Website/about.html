@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+
+    <header>
+        
+        <a href="about.html" class="logo">About</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <section class="hero">
+            <div class="inner">
+                <div class="clipper">
+                 
+                    <p style="text-align:justify">"I graduated in Economics at Manchester Met University and 
+                        had my first job as a Data Analyst at Morrison Data Services. I have come across coding 
+                        for the first-time using Tableau which isn’t a programming language but do link to R via 
+                        calculated fields. R uses R functions, libraries, packages, saved models. I found the 
+                        programming world interesting and decided to self-learn some. CodeNation, has helped me 
+                        understand few concepts terms that I did know but couldn’t explain why they do what they 
+                        do. I really enjoy the experience so far and wish to continue and learn more. "</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sidebar">
+            <div class="inner">
+                <div class="clipper">
+                    <h2></h2>
+                </div>
+                <div class="anim-panel">
+                    <p>“Code Nation
+                        How to maximise productivity 
+                        whilst working from home.
+                        The overarching thing to 
+                        remember about remote 
+                        working is that it’s business as 
+                        usual, especially right now.“ 
+                        </p>
+                    <a href="https://wearecodenation.com/blog/how-to-maximise-productivity-whilst-working-from-home/" class="read-btn">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Subscribe</h2>
+                </div>
+                <div class="anim-panel">
+                    <p>Join me and get free e-books
+                        on Graphic Design</p>
+                    <input placeholder="Email Address" type="text" name="email">
+                    <button class="cta">Subscribe Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function(event) {
+
+            document.body.style.display = "block";
+
+            window.addEventListener("load", function(e) {
+
+                let tl = new TimelineMax();
+        tl.staggerFrom('section', 2, {
+            opacity: 0,
+            scale: .5,
+            ease: Power2.easeOut
+        }, 0.2)
+
+        tl.staggerFrom('h1, h2', .5, {
+
+            opacity: 0,
+            y: -40,
+            ease: Power2.easeInOut
+        }, 0.2, "-=2")
+
+        tl.staggerFrom('.anim-panel', 1, {
+
+            opacity: 0,
+            y: -40,
+            ease: Power2.easeInOut
+            }, 0.2, "-=1.5")
+
+            }, false);
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="css/work.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="work.html" class="logo">Work</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <section class="hero">
+            <div class="inner">
+                <div class="clipper">
+                    <p style="text-align:justify">While studying with CodeNation, I was able to learn and search more efficiently.
+                        I began to look for different projects online and started to get more more involved. Those 3weeks might have been short, however I managed to gain a lot of insights, while searching for projects to work on in my own spare time.
+                        I currently started to develop a Super Mario Games using JavaScript. Very challenging, and push me to learn even more about the different concepts and logics that need to be implemented.
+                        
+                        Also while doing this project, my coursework, which you can find by clicking on the "Coursework link".</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sidebar">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Featured</h2>
+                </div>
+                <div class="anim-panel">
+                    <p>“1.1 Describing the purpose of IT in modern business 
+
+                        Business process happen in the real world. Let’s say we have a hiring process, the job is advertised, 
+                        candidates are interviewed, decisions are made...“ 
+                        </p>
+                    <a href="/Swup/assignment.html" class="read-btn">Coursework</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Subscribe</h2>
+                </div>
+                <div class="anim-panel">
+                    <p>Join me and get free e-books
+                        on Graphic Design</p>
+                    <input placeholder="Email Address" type="text" name="email">
+                    <button class="cta">Subscribe Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function(event) {
+
+            document.body.style.display = "block";
+
+            window.addEventListener("load", function(e) {
+
+                let tl = new TimelineMax();
+        tl.staggerFrom('section', 2, {
+            opacity: 0,
+            scale: .5,
+            ease: Power2.easeOut
+        }, 0.2)
+
+        tl.staggerFrom('h1, h2', .5, {
+
+            opacity: 0,
+            y: -40,
+            ease: Power2.easeInOut
+        }, 0.2, "-=2")
+
+        tl.staggerFrom('.anim-panel', 1, {
+
+            opacity: 0,
+            y: -40,
+            ease: Power2.easeInOut
+            }, 0.2, "-=1.5")
+
+            }, false);
+        })
+
+    </script>
+</body>
+</html>
